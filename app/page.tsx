@@ -19,12 +19,13 @@ import {
   AppWindow,
   Settings
 } from 'lucide-react'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,15 +35,16 @@ export default function Home() {
               <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
                 <Layout className="w-5 h-5 text-white" />
               </div>
-              <span className="font-bold text-xl text-slate-900">MacLayout</span>
+              <span className="font-bold text-xl text-slate-900 dark:text-white">MacLayout</span>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <Link href="#features" className="text-slate-600 hover:text-primary-600 transition-colors">Features</Link>
-              <Link href="#pricing" className="text-slate-600 hover:text-primary-600 transition-colors">Pricing</Link>
-              <Link href="/guide" className="text-slate-600 hover:text-primary-600 transition-colors">User Guide</Link>
-              <Link href="/support" className="text-slate-600 hover:text-primary-600 transition-colors">Support</Link>
+              <Link href="#features" className="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Features</Link>
+              <Link href="#pricing" className="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Pricing</Link>
+              <Link href="/guide" className="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">User Guide</Link>
+              <Link href="/support" className="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Support</Link>
+              <ThemeToggle />
               <Link
                 href="/download"
                 className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center gap-2"
@@ -53,23 +55,26 @@ export default function Home() {
             </div>
 
             {/* Mobile menu button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <div className="md:hidden flex items-center gap-2">
+              <ThemeToggle />
+              <button
+                className="p-2 text-slate-900 dark:text-white"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-slate-200">
+          <div className="md:hidden bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
             <div className="px-4 py-4 space-y-3">
-              <Link href="#features" className="block text-slate-600 hover:text-primary-600">Features</Link>
-              <Link href="#pricing" className="block text-slate-600 hover:text-primary-600">Pricing</Link>
-              <Link href="/guide" className="block text-slate-600 hover:text-primary-600">User Guide</Link>
-              <Link href="/support" className="block text-slate-600 hover:text-primary-600">Support</Link>
+              <Link href="#features" className="block text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400">Features</Link>
+              <Link href="#pricing" className="block text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400">Pricing</Link>
+              <Link href="/guide" className="block text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400">User Guide</Link>
+              <Link href="/support" className="block text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400">Support</Link>
               <Link
                 href="/download"
                 className="block bg-primary-600 text-white px-4 py-2 rounded-lg text-center"
@@ -86,19 +91,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
               Now with macOS Spaces Support
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
               Save & Restore Your
               <span className="gradient-text block">Window Layouts</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Stop wasting time rearranging windows every day. MacLayout saves your perfect
               setup and restores it with a single click or keyboard shortcut.
             </p>
@@ -114,7 +119,7 @@ export default function Home() {
               </Link>
               <Link
                 href="#features"
-                className="text-slate-700 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-slate-100 transition-colors flex items-center gap-2"
+                className="text-slate-700 dark:text-slate-200 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-2"
               >
                 Learn More
                 <ArrowRight className="w-5 h-5" />
@@ -122,7 +127,7 @@ export default function Home() {
             </div>
 
             {/* Social Proof */}
-            <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
+            <div className="flex items-center justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
               <div className="flex items-center gap-1">
                 <Check className="w-4 h-4 text-green-500" />
                 14-day free trial
@@ -192,26 +197,26 @@ export default function Home() {
             </div>
 
             {/* Floating elements */}
-            <div className="absolute -left-8 top-1/4 bg-white rounded-xl shadow-xl p-4 hidden lg:block animate-float">
+            <div className="absolute -left-8 top-1/4 bg-white dark:bg-slate-800 rounded-xl shadow-xl p-4 hidden lg:block animate-float">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <Check className="w-5 h-5 text-green-600" />
+                <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                  <Check className="w-5 h-5 text-green-600 dark:text-green-400" />
                 </div>
                 <div>
-                  <div className="font-semibold text-slate-900">Layout Saved</div>
-                  <div className="text-sm text-slate-500">Home Office</div>
+                  <div className="font-semibold text-slate-900 dark:text-white">Layout Saved</div>
+                  <div className="text-sm text-slate-500 dark:text-slate-400">Home Office</div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -right-8 bottom-1/4 bg-white rounded-xl shadow-xl p-4 hidden lg:block animate-float" style={{ animationDelay: '2s' }}>
+            <div className="absolute -right-8 bottom-1/4 bg-white dark:bg-slate-800 rounded-xl shadow-xl p-4 hidden lg:block animate-float" style={{ animationDelay: '2s' }}>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                  <Monitor className="w-5 h-5 text-primary-600" />
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
+                  <Monitor className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div>
-                  <div className="font-semibold text-slate-900">Monitor Connected</div>
-                  <div className="text-sm text-slate-500">Auto-restoring layout...</div>
+                  <div className="font-semibold text-slate-900 dark:text-white">Monitor Connected</div>
+                  <div className="text-sm text-slate-500 dark:text-slate-400">Auto-restoring layout...</div>
                 </div>
               </div>
             </div>
@@ -220,85 +225,85 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 bg-slate-50">
+      <section id="features" className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Everything You Need for Perfect Window Management
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               More than just window snapping. Save complete layouts, automate triggers, and work smarter.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-                <Layout className="w-7 h-7 text-primary-600" />
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mb-6">
+                <Layout className="w-7 h-7 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Save Named Layouts</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Save Named Layouts</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Create and save unlimited layouts with custom names. Switch between "Home Office",
                 "Focus Mode", or "Presentation" with ease.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-accent-100 rounded-xl flex items-center justify-center mb-6">
-                <Keyboard className="w-7 h-7 text-accent-600" />
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-accent-100 dark:bg-accent-900/30 rounded-xl flex items-center justify-center mb-6">
+                <Keyboard className="w-7 h-7 text-accent-600 dark:text-accent-400" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Keyboard Shortcuts</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Keyboard Shortcuts</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Assign global hotkeys to your favorite layouts. Restore your entire workspace
                 without touching the mouse.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                <Monitor className="w-7 h-7 text-green-600" />
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mb-6">
+                <Monitor className="w-7 h-7 text-green-600 dark:text-green-400" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Multi-Monitor Support</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Multi-Monitor Support</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Works perfectly with multiple displays. Layouts adapt intelligently when
                 monitors connect or disconnect.
               </p>
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                <Zap className="w-7 h-7 text-purple-600" />
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mb-6">
+                <Zap className="w-7 h-7 text-purple-600 dark:text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Auto-Trigger on Display Change</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Auto-Trigger on Display Change</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Automatically restore layouts when you connect or disconnect monitors.
                 Dock your laptop and watch windows arrange themselves.
               </p>
             </div>
 
             {/* Feature 5 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
-                <AppWindow className="w-7 h-7 text-pink-600" />
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/30 rounded-xl flex items-center justify-center mb-6">
+                <AppWindow className="w-7 h-7 text-pink-600 dark:text-pink-400" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">App Launch Triggers</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">App Launch Triggers</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Trigger layouts when specific apps launch. Open Slack and watch your
                 communication setup appear automatically.
               </p>
             </div>
 
             {/* Feature 6 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                <Settings className="w-7 h-7 text-blue-600" />
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6">
+                <Settings className="w-7 h-7 text-blue-600 dark:text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Menu Bar App</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Menu Bar App</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Lives quietly in your menu bar. Access layouts instantly without cluttering
                 your Dock or interrupting your flow.
               </p>
@@ -308,13 +313,13 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               How It Works
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               Get started in seconds. No complex setup required.
             </p>
           </div>
@@ -324,8 +329,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                 1
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Arrange Your Windows</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Arrange Your Windows</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Set up your windows exactly how you like them. Position apps across your displays
                 for your ideal workflow.
               </p>
@@ -335,8 +340,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                 2
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Save as Layout</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Save as Layout</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Click the menu bar icon and save your arrangement with a custom name.
                 Optionally assign a keyboard shortcut.
               </p>
@@ -346,8 +351,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                 3
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Restore Anytime</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Restore Anytime</h3>
+              <p className="text-slate-600 dark:text-slate-300">
                 Restore your layout with one click or keyboard shortcut. Set up automation
                 triggers for hands-free workflow.
               </p>
@@ -357,19 +362,19 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 bg-slate-50">
+      <section id="pricing" className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Simple, Fair Pricing
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               One-time purchase. No subscriptions. Lifetime updates for this version.
             </p>
           </div>
 
           <div className="max-w-lg mx-auto">
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-xl overflow-hidden">
               {/* Header */}
               <div className="bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-white text-center">
                 <h3 className="text-2xl font-bold mb-2">MacLayout</h3>
@@ -394,7 +399,7 @@ export default function Home() {
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-slate-700">{feature}</span>
+                      <span className="text-slate-700 dark:text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -406,16 +411,16 @@ export default function Home() {
                   Start 14-Day Free Trial
                 </Link>
 
-                <p className="text-center text-sm text-slate-500 mt-4">
+                <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-4">
                   No credit card required for trial
                 </p>
               </div>
             </div>
 
             {/* Trial info */}
-            <div className="mt-8 bg-primary-50 rounded-xl p-6 text-center">
-              <h4 className="font-semibold text-primary-900 mb-2">Free Trial Includes</h4>
-              <p className="text-primary-700 text-sm">
+            <div className="mt-8 bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 text-center">
+              <h4 className="font-semibold text-primary-900 dark:text-primary-300 mb-2">Free Trial Includes</h4>
+              <p className="text-primary-700 dark:text-primary-400 text-sm">
                 Full access to all features for 14 days. Up to 3 saved layouts during trial.
               </p>
             </div>
@@ -424,10 +429,10 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white dark:bg-slate-900">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Frequently Asked Questions
             </h2>
           </div>
@@ -455,9 +460,9 @@ export default function Home() {
                 a: 'MacLayout requires macOS 13 (Ventura) or later. We support both Intel and Apple Silicon Macs.',
               },
             ].map((faq, index) => (
-              <div key={index} className="bg-slate-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
+              <div key={index} className="bg-slate-50 dark:bg-slate-800 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">{faq.q}</h3>
+                <p className="text-slate-600 dark:text-slate-300">{faq.a}</p>
               </div>
             ))}
           </div>
