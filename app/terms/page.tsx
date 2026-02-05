@@ -177,8 +177,15 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">13. Governing Law</h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                These Terms shall be governed by and construed in accordance with the laws of the
-                State of California, United States, without regard to its conflict of law provisions.
+                These Terms shall be governed by and construed in accordance with the laws of Sweden,
+                without regard to its conflict of law provisions. Any disputes arising from these Terms
+                shall be resolved by the courts of Sweden.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                If you are a consumer residing in the European Union, you also enjoy the protection
+                afforded by the mandatory provisions of the law of your country of residence. Nothing in
+                these Terms affects your rights as a consumer under applicable EU or national consumer
+                protection legislation.
               </p>
             </section>
 

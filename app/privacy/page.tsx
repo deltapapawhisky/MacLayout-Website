@@ -42,6 +42,21 @@ export default function PrivacyPage() {
                 data necessary to provide and improve our service, and we never sell or share your
                 personal information with third parties for marketing purposes.
               </p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                This policy is provided in accordance with the EU General Data Protection Regulation
+                (GDPR) and applicable Swedish data protection law.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Data Controller</h2>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                The data controller responsible for your personal data is MacLayout, based in Sweden.
+                You can contact us at{' '}
+                <a href="mailto:support@maclayout.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+                  support@maclayout.com
+                </a>.
+              </p>
             </section>
 
             <section className="mb-8">
@@ -103,6 +118,18 @@ export default function PrivacyPage() {
             </section>
 
             <section className="mb-8">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Legal Basis for Processing</h2>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                Under the GDPR, we process personal data on the following legal bases:
+              </p>
+              <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
+                <li><strong>Contract performance:</strong> Processing license keys and machine identifiers to activate and verify your license</li>
+                <li><strong>Legitimate interest:</strong> Update checks to ensure you have the latest version with security fixes</li>
+                <li><strong>Consent:</strong> Website analytics, where applicable</li>
+              </ul>
+            </section>
+
+            <section className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Accessibility Permission</h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 MacLayout requires Accessibility permission to function. This permission
@@ -122,7 +149,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Data Security</h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Your layout data is stored locally on your Mac using standard macOS security practices.
-                License information is stored securely in the macOS Keychain.
+                License information is stored securely in the app's local data directory.
               </p>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 All communication with our servers (license verification, update checks) is encrypted
@@ -145,23 +172,63 @@ export default function PrivacyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Your Rights</h2>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Your Rights Under GDPR</h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                You have the right to:
+                Under the General Data Protection Regulation, you have the following rights:
               </p>
               <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
-                <li>Delete all local app data by removing the app and its support files</li>
-                <li>Request information about any data we have associated with your license</li>
-                <li>Request deletion of your license data from our systems</li>
-                <li>Disable automatic update checking in preferences</li>
+                <li><strong>Right of access:</strong> Request a copy of the personal data we hold about you</li>
+                <li><strong>Right to rectification:</strong> Request correction of inaccurate personal data</li>
+                <li><strong>Right to erasure:</strong> Request deletion of your personal data from our systems</li>
+                <li><strong>Right to data portability:</strong> Receive your data in a structured, machine-readable format</li>
+                <li><strong>Right to restrict processing:</strong> Request that we limit how we use your data</li>
+                <li><strong>Right to object:</strong> Object to processing based on legitimate interests</li>
+                <li><strong>Right to withdraw consent:</strong> Where processing is based on consent, withdraw it at any time</li>
               </ul>
+              <p className="text-slate-600 dark:text-slate-300 mt-4">
+                You can also delete all local app data at any time by removing the app and its support
+                files from your Mac, and disable automatic update checking in preferences.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 mt-4">
+                To exercise any of these rights, contact us at{' '}
+                <a href="mailto:support@maclayout.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+                  support@maclayout.com
+                </a>. We will respond within 30 days.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 mt-4">
+                If you believe your data protection rights have been violated, you have the right to
+                lodge a complaint with the Swedish Authority for Privacy Protection (Integritetsskyddsmyndigheten, IMY)
+                or the supervisory authority in your country of residence.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Data Retention</h2>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                License activation data is retained for as long as your license is active. If you
+                request deletion of your data, we will remove it within 30 days, except where we are
+                required to retain it for legal or accounting purposes.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                Local app data (layouts, preferences) is stored only on your device and is deleted
+                when you uninstall the app.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">International Data Transfers</h2>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                Our payment processor (Paddle) may process data outside the European Economic Area (EEA).
+                Where this occurs, appropriate safeguards are in place in accordance with GDPR requirements,
+                including Standard Contractual Clauses or adequacy decisions.
+              </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Children's Privacy</h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                MacLayout is not directed at children under 13. We do not knowingly collect
-                personal information from children.
+                MacLayout is not directed at children. We do not knowingly collect personal
+                information from anyone under the age of 16.
               </p>
             </section>
 

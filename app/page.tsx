@@ -534,7 +534,7 @@ export default function Home() {
             <div className="flex items-center gap-4 text-sm">
               <span>Requires macOS 13+</span>
               <span className="text-slate-600">|</span>
-              <span>Made with care for Mac users</span>
+              <span>Made in Sweden</span>
             </div>
           </div>
         </div>
