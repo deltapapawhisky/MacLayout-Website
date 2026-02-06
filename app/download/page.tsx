@@ -11,7 +11,8 @@ import {
   Apple,
   FileText,
   ArrowLeft,
-  ExternalLink
+  ExternalLink,
+  Github
 } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
@@ -19,6 +20,8 @@ export default function DownloadPage() {
   const currentVersion = '1.0.0'
   const releaseDate = 'February 2026'
   const fileSize = '8.2 MB'
+  const downloadUrl = `https://github.com/deltapapawhisky/WindowLayoutManager/releases/download/v${currentVersion}/MacLayout.dmg`
+  const releasesUrl = 'https://github.com/deltapapawhisky/WindowLayoutManager/releases'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
@@ -85,11 +88,20 @@ export default function DownloadPage() {
                 </div>
 
                 <a
-                  href="#"
+                  href={downloadUrl}
                   className="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-700 transition-all hover:shadow-lg"
                 >
                   <Download className="w-5 h-5" />
                   Download for macOS
+                </a>
+                <a
+                  href={releasesUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 ml-4 text-sm"
+                >
+                  <Github className="w-4 h-4" />
+                  View on GitHub
                 </a>
               </div>
             </div>
@@ -203,10 +215,15 @@ export default function DownloadPage() {
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm p-8">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Release Notes</h3>
-              <Link href="#" className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm flex items-center gap-1">
+              <a
+                href={releasesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm flex items-center gap-1"
+              >
                 Full Changelog
                 <ExternalLink className="w-3 h-3" />
-              </Link>
+              </a>
             </div>
 
             <div className="space-y-6">

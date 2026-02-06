@@ -26,8 +26,16 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-lg focus:outline-none"
+      >
+        Skip to main content
+      </a>
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -58,10 +66,13 @@ export default function Home() {
             <div className="md:hidden flex items-center gap-2">
               <ThemeToggle />
               <button
-                className="p-2 text-slate-900 dark:text-white"
+                className="p-2 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 rounded-lg"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-menu"
+                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
               </button>
             </div>
           </div>
@@ -69,7 +80,7 @@ export default function Home() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
+          <div id="mobile-menu" className="md:hidden bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
             <div className="px-4 py-4 space-y-3">
               <Link href="#features" className="block text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400">Features</Link>
               <Link href="#pricing" className="block text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400">Pricing</Link>
@@ -87,7 +98,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
+      <section id="main-content" className="pt-32 pb-20 px-4" aria-labelledby="hero-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
@@ -97,7 +108,7 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+            <h1 id="hero-heading" className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
               Save & Restore Your
               <span className="gradient-text block">Window Layouts</span>
             </h1>
@@ -224,11 +235,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Demo Video Section */}
+      <section className="py-16 px-4 bg-white dark:bg-slate-900">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+              See MacLayout in Action
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-300">
+              Watch how easy it is to save and restore your window layouts.
+            </p>
+          </div>
+
+          {/* Video Placeholder */}
+          <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-2xl">
+            {/* Play button overlay */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-20 bg-white/90 dark:bg-white/80 rounded-full flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all cursor-pointer group">
+                <svg
+                  className="w-8 h-8 text-primary-600 ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Static preview image placeholder */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 gap-4">
+              <div className="flex items-center gap-4 opacity-30">
+                <div className="w-32 h-20 bg-slate-700 rounded-lg"></div>
+                <div className="w-48 h-28 bg-slate-700 rounded-lg"></div>
+                <div className="w-32 h-20 bg-slate-700 rounded-lg"></div>
+              </div>
+              <p className="text-sm opacity-50">Demo video coming soon</p>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-4">
+            No sound required • 60 seconds
+          </p>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
+      <section id="features" className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 id="features-heading" className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Everything You Need for Perfect Window Management
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
@@ -312,8 +367,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Comparison Section */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              How MacLayout Compares
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              More than window snapping. MacLayout saves complete layouts with automation.
+            </p>
+          </div>
+
+          {/* Comparison Table */}
+          <div className="overflow-x-auto">
+            <table className="w-full max-w-4xl mx-auto">
+              <thead>
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  <th className="py-4 px-4 text-left text-slate-600 dark:text-slate-400 font-medium">Feature</th>
+                  <th className="py-4 px-4 text-center">
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center mb-1">
+                        <Layout className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="font-bold text-slate-900 dark:text-white">MacLayout</span>
+                    </div>
+                  </th>
+                  <th className="py-4 px-4 text-center text-slate-600 dark:text-slate-300">Rectangle</th>
+                  <th className="py-4 px-4 text-center text-slate-600 dark:text-slate-300">Magnet</th>
+                  <th className="py-4 px-4 text-center text-slate-600 dark:text-slate-300">Moom</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm">
+                {([
+                  { feature: 'Save named layouts', maclayout: true, rectangle: false, magnet: false, moom: true },
+                  { feature: 'Restore complete layouts', maclayout: true, rectangle: false, magnet: false, moom: true },
+                  { feature: 'Window snapping presets', maclayout: true, rectangle: true, magnet: true, moom: true },
+                  { feature: 'Global keyboard shortcuts', maclayout: true, rectangle: true, magnet: true, moom: true },
+                  { feature: 'Multi-monitor support', maclayout: true, rectangle: true, magnet: true, moom: true },
+                  { feature: 'Auto-trigger on display change', maclayout: true, rectangle: false, magnet: false, moom: false },
+                  { feature: 'Auto-trigger on app launch', maclayout: true, rectangle: false, magnet: false, moom: false },
+                  { feature: 'macOS Spaces support', maclayout: true, rectangle: 'partial', magnet: 'partial', moom: 'partial' },
+                  { feature: 'Smart relative positioning', maclayout: true, rectangle: false, magnet: false, moom: 'partial' },
+                  { feature: 'One-time purchase', maclayout: true, rectangle: true, magnet: true, moom: true },
+                ] as { feature: string; maclayout: boolean | string; rectangle: boolean | string; magnet: boolean | string; moom: boolean | string }[]).map((row, index) => (
+                  <tr key={index} className="border-b border-slate-100 dark:border-slate-800">
+                    <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{row.feature}</td>
+                    <td className="py-4 px-4 text-center">
+                      {row.maclayout === true ? (
+                        <Check className="w-5 h-5 text-green-500 mx-auto" />
+                      ) : row.maclayout === 'partial' ? (
+                        <span className="text-yellow-500">~</span>
+                      ) : (
+                        <X className="w-5 h-5 text-slate-300 dark:text-slate-600 mx-auto" />
+                      )}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {row.rectangle === true ? (
+                        <Check className="w-5 h-5 text-green-500 mx-auto" />
+                      ) : row.rectangle === 'partial' ? (
+                        <span className="text-yellow-500">~</span>
+                      ) : (
+                        <X className="w-5 h-5 text-slate-300 dark:text-slate-600 mx-auto" />
+                      )}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {row.magnet === true ? (
+                        <Check className="w-5 h-5 text-green-500 mx-auto" />
+                      ) : row.magnet === 'partial' ? (
+                        <span className="text-yellow-500">~</span>
+                      ) : (
+                        <X className="w-5 h-5 text-slate-300 dark:text-slate-600 mx-auto" />
+                      )}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {row.moom === true ? (
+                        <Check className="w-5 h-5 text-green-500 mx-auto" />
+                      ) : row.moom === 'partial' ? (
+                        <span className="text-yellow-500">~</span>
+                      ) : (
+                        <X className="w-5 h-5 text-slate-300 dark:text-slate-600 mx-auto" />
+                      )}
+                    </td>
+                  </tr>
+                ))}
+                <tr className="bg-slate-50 dark:bg-slate-800/50">
+                  <td className="py-4 px-4 font-semibold text-slate-900 dark:text-white">Price</td>
+                  <td className="py-4 px-4 text-center font-semibold text-primary-600 dark:text-primary-400">$14.99</td>
+                  <td className="py-4 px-4 text-center text-slate-600 dark:text-slate-400">Free / $9.99</td>
+                  <td className="py-4 px-4 text-center text-slate-600 dark:text-slate-400">$7.99</td>
+                  <td className="py-4 px-4 text-center text-slate-600 dark:text-slate-400">$15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
+            ~ indicates partial support
+          </p>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
@@ -362,10 +518,10 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
+      <section id="pricing" className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50" aria-labelledby="pricing-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 id="pricing-heading" className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Simple, Fair Pricing
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
@@ -489,7 +645,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 px-4">
+      <footer className="bg-slate-900 text-slate-400 py-12 px-4" role="contentinfo">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
