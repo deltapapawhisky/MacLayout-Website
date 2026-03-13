@@ -235,50 +235,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Demo Video Section */}
-      <section className="py-16 px-4 bg-white dark:bg-slate-900">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-              See MacLayout in Action
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300">
-              Watch how easy it is to save and restore your window layouts.
-            </p>
-          </div>
-
-          {/* Video Placeholder */}
-          <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-2xl">
-            {/* Play button overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-white/90 dark:bg-white/80 rounded-full flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all cursor-pointer group">
-                <svg
-                  className="w-8 h-8 text-primary-600 ml-1"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-
-            {/* Static preview image placeholder */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 gap-4">
-              <div className="flex items-center gap-4 opacity-30">
-                <div className="w-32 h-20 bg-slate-700 rounded-lg"></div>
-                <div className="w-48 h-28 bg-slate-700 rounded-lg"></div>
-                <div className="w-32 h-20 bg-slate-700 rounded-lg"></div>
-              </div>
-              <p className="text-sm opacity-50">Demo video coming soon</p>
-            </div>
-          </div>
-
-          <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-4">
-            No sound required • 60 seconds
-          </p>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto">
