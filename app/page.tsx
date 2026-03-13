@@ -587,9 +587,6 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-4">
             Ready to Streamline Your Workflow?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Join thousands of Mac users who save hours every week with MacLayout.
-          </p>
           <Link
             href="/download"
             className="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-50 transition-colors"
