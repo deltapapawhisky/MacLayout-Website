@@ -16,9 +16,9 @@ import {
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 export default function DownloadPage() {
-  const currentVersion = '1.0.0'
+  const currentVersion = '1.0'
   const releaseDate = 'March 2026'
-  const fileSize = '8.2 MB'
+  const fileSize = '1.5 MB'
   const downloadUrl = `https://github.com/deltapapawhisky/WindowLayoutManager/releases/download/v${currentVersion}/MacLayout.dmg`
   const releasesUrl = 'https://github.com/deltapapawhisky/WindowLayoutManager/releases'
   const purchaseUrl = 'https://maclayout.lemonsqueezy.com/checkout/buy/f9988613-b2c4-4fc5-8cb2-9f2a1daf15c2'
@@ -231,7 +231,7 @@ export default function DownloadPage() {
                   <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-xs font-semibold px-2 py-1 rounded">
                     Latest
                   </span>
-                  <h4 className="font-semibold text-slate-900 dark:text-white">Version 1.0.0</h4>
+                  <h4 className="font-semibold text-slate-900 dark:text-white">Version 1.0</h4>
                   <span className="text-sm text-slate-500 dark:text-slate-400">{releaseDate}</span>
                 </div>
                 <ul className="text-sm text-slate-600 dark:text-slate-400 space-y-1 ml-4">
