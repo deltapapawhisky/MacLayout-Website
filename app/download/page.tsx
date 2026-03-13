@@ -11,17 +11,17 @@ import {
   Apple,
   FileText,
   ArrowLeft,
-  ExternalLink,
-  Github
+  ExternalLink
 } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 export default function DownloadPage() {
   const currentVersion = '1.0.0'
-  const releaseDate = 'February 2026'
+  const releaseDate = 'March 2026'
   const fileSize = '8.2 MB'
   const downloadUrl = `https://github.com/deltapapawhisky/WindowLayoutManager/releases/download/v${currentVersion}/MacLayout.dmg`
   const releasesUrl = 'https://github.com/deltapapawhisky/WindowLayoutManager/releases'
+  const purchaseUrl = 'https://maclayout.lemonsqueezy.com/checkout/buy/f9988613-b2c4-4fc5-8cb2-9f2a1daf15c2'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
@@ -95,13 +95,12 @@ export default function DownloadPage() {
                   Download for macOS
                 </a>
                 <a
-                  href={releasesUrl}
+                  href={purchaseUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 ml-4 text-sm"
+                  className="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white px-6 py-4 rounded-xl text-lg font-semibold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all ml-4"
                 >
-                  <Github className="w-4 h-4" />
-                  View on GitHub
+                  Buy License — $14.99
                 </a>
               </div>
             </div>
