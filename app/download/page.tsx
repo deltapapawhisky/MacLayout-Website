@@ -21,7 +21,7 @@ export default function DownloadPage() {
   const fileSize = '1.5 MB'
   const downloadUrl = `https://github.com/deltapapawhisky/WindowLayoutManager/releases/download/v${currentVersion}/MacLayout.dmg`
   const releasesUrl = 'https://github.com/deltapapawhisky/WindowLayoutManager/releases'
-  const purchaseUrl = 'https://maclayout.lemonsqueezy.com/checkout/buy/f9988613-b2c4-4fc5-8cb2-9f2a1daf15c2'
+  const purchaseUrl = 'https://maclayout.lemonsqueezy.com/checkout'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
