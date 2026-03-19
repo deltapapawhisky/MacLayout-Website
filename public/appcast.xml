@@ -13,12 +13,12 @@
 
     <item>
         <title>Version 1.0</title>
-        <pubDate>Fri, 13 Mar 2026 19:42:17 +0100</pubDate>
+        <pubDate>Thu, 19 Mar 2026 18:27:57 +0100</pubDate>
         <sparkle:version>1.0</sparkle:version>
         <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
         <enclosure url="https://github.com/deltapapawhisky/WindowLayoutManager/releases/download/v1.0/MacLayout.dmg"
-                   sparkle:edSignature="1VD0S9/VUh4mcwdNDMj4u6mEA1j9zrLGB+moP8+FOnQrAYQZdyM+CV6Wr6T8dRT8hTf6jjs4G0JvLC1l1dJFDw==" length="1532057"
+                   sparkle:edSignature="fnt0l0GZ6gmNuVk7kAWn+XOo9kztRWjMF7M4VOaNS9Smh1G5VOHpmlm1ebw176rTXU4cz3Spk3WEvyDFjjVJDA==" length="1531928"
                    type="application/octet-stream" />
     </item>
 
