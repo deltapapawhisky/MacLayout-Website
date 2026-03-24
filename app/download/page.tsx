@@ -100,7 +100,7 @@ export default function DownloadPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white px-6 py-4 rounded-xl text-lg font-semibold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all ml-4"
                 >
-                  Buy License — $14.99
+                  Buy License — $19.99
                 </a>
               </div>
             </div>

@@ -409,7 +409,7 @@ export default function Home() {
                 ))}
                 <tr className="bg-slate-50 dark:bg-slate-800/50">
                   <td className="py-4 px-4 font-semibold text-slate-900 dark:text-white">Price</td>
-                  <td className="py-4 px-4 text-center font-semibold text-primary-600 dark:text-primary-400">$14.99</td>
+                  <td className="py-4 px-4 text-center font-semibold text-primary-600 dark:text-primary-400">$19.99</td>
                   <td className="py-4 px-4 text-center text-slate-600 dark:text-slate-400">Free / $9.99</td>
                   <td className="py-4 px-4 text-center text-slate-600 dark:text-slate-400">$7.99</td>
                   <td className="py-4 px-4 text-center text-slate-600 dark:text-slate-400">$15</td>
@@ -491,7 +491,7 @@ export default function Home() {
               <div className="bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-white text-center">
                 <h3 className="text-2xl font-bold mb-2">MacLayout</h3>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-5xl font-extrabold">$14.99</span>
+                  <span className="text-5xl font-extrabold">$19.99</span>
                   <span className="text-primary-200">one-time</span>
                 </div>
               </div>
