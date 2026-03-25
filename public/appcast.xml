@@ -12,6 +12,17 @@
     <!-- Use scripts/release.sh to generate entries. -->
 
     <item>
+        <title>Version 1.2</title>
+        <pubDate>Tue, 25 Mar 2026 12:50:00 +0100</pubDate>
+        <sparkle:version>3</sparkle:version>
+        <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+        <enclosure url="https://maclayout.com/MacLayout.dmg"
+                   sparkle:edSignature="/shdWJf5RrjPVqpLxJOKQshJQnTieWEGRmaoNfAfwfLB6xTwfAS4uqL5WsevX8mseiEn/GnZE2q0FO4IXpmXAA==" length="1542882"
+                   type="application/octet-stream" />
+    </item>
+
+    <item>
         <title>Version 1.1</title>
         <pubDate>Tue, 25 Mar 2026 12:30:00 +0100</pubDate>
         <sparkle:version>2</sparkle:version>
