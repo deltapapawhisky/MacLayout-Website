@@ -16,8 +16,20 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 export default function BestWindowManagersMultiMonitor() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Best Window Managers for Multi-Monitor Mac Setups in 2026',
+    datePublished: '2026-03-25',
+    author: { '@type': 'Person', name: 'Daniel White' },
+    publisher: { '@type': 'Organization', name: 'MacLayout', url: 'https://maclayout.com' },
+    description: 'Multi-monitor setups on macOS can be frustrating without the right tools. Here are the best window managers for managing windows across multiple displays.',
+    url: 'https://maclayout.com/blog/best-window-managers-multi-monitor-mac',
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

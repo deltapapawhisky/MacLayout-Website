@@ -1,0 +1,163 @@
+# MacLayout — Full Documentation
+
+> MacLayout is a macOS menu bar app that saves, restores, and automates window layouts. It captures the position and size of every open window across multiple monitors and restores them with a single click, keyboard shortcut, or automated trigger.
+
+- **Category**: macOS Utility / Window Manager / Productivity
+- **Platform**: macOS 13 (Ventura) or later, Intel and Apple Silicon
+- **Pricing**: $19.99 one-time purchase, 14-day free trial (up to 3 saved layouts)
+- **Developer**: Daniel White (Sweden)
+- **Website**: https://maclayout.com
+- **Download**: https://maclayout.com/download
+
+---
+
+## Features
+
+### Save Named Layouts
+Save unlimited named window layouts such as "Home Office", "Focus Mode", or "Presentation". Each layout captures:
+- Window positions and sizes
+- Which display each window is on
+- The app that owns each window
+- Which macOS Space the window is on
+- Whether windows are minimized or fullscreen
+
+### Keyboard Shortcuts
+Assign global keyboard shortcuts to any layout for instant access without using the mouse. Recommended shortcuts:
+- ⌘⌥1 — Primary layout
+- ⌘⌥2 — Secondary layout
+- ⌘⌥F — Focus mode
+
+### Multi-Monitor Support
+MacLayout fully supports multi-monitor setups and intelligently adapts to different display configurations. Features include:
+- Layouts remember which display each window belongs to
+- Smart positioning adapts windows when displays change
+- Different layouts for different monitor setups
+- Proportional window scaling for different screen sizes
+
+### Auto-Trigger on Display Change
+Automatically restore a layout when your display configuration changes — for example, when you dock your laptop or connect an external monitor. Setup:
+1. Set up your displays as you want them
+2. Arrange your windows
+3. Save the layout with "Trigger on display change" enabled
+4. The layout will auto-restore when this display setup is detected
+
+### Auto-Trigger on App Launch
+Automatically restore a layout when specific apps launch. For example, open Slack and watch your communication setup appear automatically. Setup:
+1. Create a layout with your desired window arrangement
+2. Edit the layout and enable "Trigger on app launch"
+3. Select which app(s) should trigger this layout
+4. When the app launches, the layout will be restored
+
+### Menu Bar App
+MacLayout lives quietly in your menu bar. Access layouts instantly without cluttering your Dock or interrupting your flow.
+
+---
+
+## How It Works
+
+1. **Arrange Your Windows** — Set up your windows exactly how you like them. Position apps across your displays for your ideal workflow.
+2. **Save as Layout** — Click the menu bar icon and save your arrangement with a custom name. Optionally assign a keyboard shortcut.
+3. **Restore Anytime** — Restore your layout with one click or keyboard shortcut. Set up automation triggers for hands-free workflow.
+
+---
+
+## Getting Started
+
+1. Download and install MacLayout from https://maclayout.com/download
+2. Grant Accessibility permission when prompted (System Settings → Privacy & Security → Accessibility)
+3. Arrange your windows how you like them
+4. Click the menu bar icon and select "Save Current Layout"
+5. Give your layout a name and optional keyboard shortcut
+
+### Accessibility Permission
+
+MacLayout requires Accessibility permission to move and resize windows. This is the same permission used by all window management apps on macOS.
+
+**How to grant permission:**
+1. Open System Settings (Apple menu → System Settings)
+2. Navigate to Privacy & Security → Accessibility
+3. Click the lock icon and authenticate if needed
+4. Find MacLayout in the list and toggle it ON
+
+**Privacy Note:** MacLayout only uses Accessibility access to read window positions and move windows. It never accesses your personal data, keystrokes, or monitors your activity. The app works entirely offline.
+
+---
+
+## Preferences
+
+Access preferences by clicking the menu bar icon and selecting "Preferences":
+- **Launch at Login:** Start MacLayout when you log in
+- **Check for Updates:** Automatically check for new versions
+- **License:** Enter your license key to unlock full features
+
+---
+
+## Troubleshooting
+
+### Windows aren't moving
+Make sure Accessibility permission is granted. Go to System Settings → Privacy & Security → Accessibility and ensure MacLayout is enabled. Try toggling it off and on again if needed.
+
+### Layout doesn't match exactly
+Some apps have minimum window sizes or don't respond to external positioning. Additionally, if your display configuration changed, windows will be positioned proportionally to fit the new screens.
+
+### Keyboard shortcut not working
+The shortcut may conflict with another app. Try using a different key combination. Also ensure MacLayout is running (visible in menu bar).
+
+### App not capturing some windows
+Some system windows, floating panels, and utility apps may not be captured. MacLayout focuses on main application windows to ensure reliable restoration.
+
+---
+
+## Comparison with Other Window Managers
+
+| Feature | MacLayout | Rectangle | Magnet | Moom |
+|---------|-----------|-----------|--------|------|
+| Save named layouts | Yes | No | No | Yes |
+| Restore complete layouts | Yes | No | No | Yes |
+| Window snapping presets | Yes | Yes | Yes | Yes |
+| Global keyboard shortcuts | Yes | Yes | Yes | Yes |
+| Multi-monitor support | Yes | Yes | Yes | Yes |
+| Auto-trigger on display change | Yes | No | No | No |
+| Auto-trigger on app launch | Yes | No | No | No |
+| macOS Spaces support | Full | Partial | Partial | Partial |
+| Smart relative positioning | Yes | No | No | Partial |
+| One-time purchase | Yes ($19.99) | Yes (Free/$9.99) | Yes ($7.99) | Yes ($15) |
+
+MacLayout is more than window snapping — it saves complete layouts with automation triggers. Rectangle and Magnet focus on snapping windows to predefined zones. Moom offers layout saving but lacks auto-triggers for display changes and app launches.
+
+---
+
+## Pricing
+
+- **$19.99** one-time purchase
+- 14-day free trial (full access, up to 3 saved layouts)
+- No credit card required for trial
+- Lifetime updates included for v1.x
+- No subscription
+
+---
+
+## FAQ
+
+**Why do I need to grant Accessibility permission?**
+MacLayout uses macOS Accessibility APIs to read and control window positions. This is the same permission required by all window management apps. We never access your personal data or track your activity.
+
+**Will my layouts work with different monitor setups?**
+Yes! MacLayout includes smart positioning that adapts your layouts when your display configuration changes. Windows scale proportionally to fit your current screens.
+
+**Is there a subscription?**
+No. MacLayout is a one-time purchase. You get 1 year of updates included, and future major versions will be available at a discounted upgrade price.
+
+**Why isn't this on the Mac App Store?**
+Mac App Store apps must be sandboxed, which prevents access to the Accessibility APIs needed for window management. We distribute directly to provide full functionality.
+
+**What macOS versions are supported?**
+MacLayout requires macOS 13 (Ventura) or later. We support both Intel and Apple Silicon Macs.
+
+---
+
+## Contact & Support
+
+- Support: https://maclayout.com/support
+- Privacy Policy: https://maclayout.com/privacy
+- Terms of Service: https://maclayout.com/terms

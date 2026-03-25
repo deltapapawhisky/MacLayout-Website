@@ -1,0 +1,56 @@
+# MacLayout
+
+> MacLayout is a macOS menu bar app that saves, restores, and automates window layouts. It captures the position and size of every open window across multiple monitors and restores them with a single click, keyboard shortcut, or automated trigger. Unlike simple window snapping tools (Rectangle, Magnet), MacLayout saves *complete named layouts* and can auto-trigger them when displays change or apps launch.
+
+## Key Information
+
+- **Category**: macOS Utility / Window Manager / Productivity
+- **Platform**: macOS 13 (Ventura) or later, Intel and Apple Silicon
+- **Pricing**: $19.99 one-time purchase, 14-day free trial
+- **Developer**: Daniel White (Sweden)
+- **Website**: https://maclayout.com
+
+## Core Features
+
+- Save unlimited named window layouts (e.g., "Home Office", "Focus Mode", "Presentation")
+- Restore layouts with one click from the menu bar or global keyboard shortcuts
+- Multi-monitor support with smart relative positioning when displays change
+- Auto-trigger layouts on display configuration change (dock/undock laptop)
+- Auto-trigger layouts on app launch (e.g., open Slack → communication layout)
+- macOS Spaces support
+- Lightweight menu bar app — no Dock clutter
+
+## Key Differentiators vs Competitors
+
+| Feature | MacLayout | Rectangle | Magnet | Moom |
+|---------|-----------|-----------|--------|------|
+| Save named layouts | Yes | No | No | Yes |
+| Auto-trigger on display change | Yes | No | No | No |
+| Auto-trigger on app launch | Yes | No | No | No |
+| macOS Spaces support | Full | Partial | Partial | Partial |
+| Smart relative positioning | Yes | No | No | Partial |
+| Price | $19.99 | Free/$9.99 | $7.99 | $15 |
+
+## Pages
+
+- [Homepage](https://maclayout.com): Features, pricing, comparison table, FAQ
+- [Download](https://maclayout.com/download): Installation instructions and free trial
+- [User Guide](https://maclayout.com/guide): Complete documentation — getting started, accessibility permissions, saving/restoring layouts, keyboard shortcuts, multi-monitor setup, automation triggers, preferences, troubleshooting
+- [Blog](https://maclayout.com/blog): Tutorials and comparisons
+- [Support](https://maclayout.com/support): Contact form for technical help, feature requests, and licensing
+- [Privacy Policy](https://maclayout.com/privacy): GDPR-compliant, works entirely offline, no data collection
+
+## Blog Articles
+
+- [How to Save and Restore Window Layouts on macOS](https://maclayout.com/blog/save-restore-window-layouts-macos)
+- [MacLayout vs Rectangle vs Magnet vs Moom](https://maclayout.com/blog/maclayout-vs-rectangle-magnet-moom)
+- [Best Window Managers for Multi-Monitor Mac Setups in 2026](https://maclayout.com/blog/best-window-managers-multi-monitor-mac)
+- [How to Automate Your Mac Workspace with Display Triggers](https://maclayout.com/blog/automate-mac-workspace-display-triggers)
+
+## FAQ
+
+- **Why Accessibility permission?** MacLayout uses macOS Accessibility APIs to read and control window positions. It never accesses personal data or tracks activity.
+- **Works with multiple monitors?** Yes, with smart positioning that adapts layouts when display configuration changes.
+- **Subscription?** No. One-time purchase with 1 year of updates included.
+- **Why not on the Mac App Store?** App Store sandboxing prevents access to the Accessibility APIs needed for window management.
+- **System requirements?** macOS 13 (Ventura) or later, Intel or Apple Silicon.

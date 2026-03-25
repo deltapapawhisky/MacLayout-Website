@@ -16,8 +16,20 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 export default function SaveRestoreWindowLayouts() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'How to Save and Restore Window Layouts on macOS',
+    datePublished: '2026-03-25',
+    author: { '@type': 'Person', name: 'Daniel White' },
+    publisher: { '@type': 'Organization', name: 'MacLayout', url: 'https://maclayout.com' },
+    description: 'Tired of rearranging your windows every morning? Learn about the best ways to save and restore window layouts on macOS, from built-in options to dedicated tools like MacLayout.',
+    url: 'https://maclayout.com/blog/save-restore-window-layouts-macos',
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

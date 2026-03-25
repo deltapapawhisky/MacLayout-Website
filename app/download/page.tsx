@@ -16,7 +16,7 @@ import {
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 export default function DownloadPage() {
-  const currentVersion = '1.2'
+  const currentVersion = '1.3'
   const releaseDate = 'March 2026'
   const fileSize = '1.5 MB'
   const downloadUrl = '/MacLayout.dmg'

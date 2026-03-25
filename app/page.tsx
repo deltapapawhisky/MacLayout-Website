@@ -24,8 +24,59 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why do I need to grant Accessibility permission?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'MacLayout uses macOS Accessibility APIs to read and control window positions. This is the same permission required by all window management apps. We never access your personal data or track your activity.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Will my layouts work with different monitor setups?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! MacLayout includes smart positioning that adapts your layouts when your display configuration changes. Windows scale proportionally to fit your current screens.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there a subscription?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. MacLayout is a one-time purchase. You get 1 year of updates included, and future major versions will be available at a discounted upgrade price.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: "Why isn't this on the Mac App Store?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Mac App Store apps must be sandboxed, which prevents access to the Accessibility APIs needed for window management. We distribute directly to provide full functionality.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What macOS versions are supported?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'MacLayout requires macOS 13 (Ventura) or later. We support both Intel and Apple Silicon Macs.',
+        },
+      },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Skip to main content link for accessibility */}
       <a
         href="#main-content"
