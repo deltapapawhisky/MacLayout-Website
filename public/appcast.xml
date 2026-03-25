@@ -48,7 +48,7 @@
     <item>
         <title>Version 1.0</title>
         <pubDate>Thu, 19 Mar 2026 18:27:57 +0100</pubDate>
-        <sparkle:version>1.0</sparkle:version>
+        <sparkle:version>1</sparkle:version>
         <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
         <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
         <enclosure url="https://maclayout.com/MacLayout.dmg"
