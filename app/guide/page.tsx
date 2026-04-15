@@ -164,7 +164,7 @@ export default function GuidePage() {
                       <li>Window positions and sizes</li>
                       <li>Which display each window is on</li>
                       <li>The app that owns each window</li>
-                      <li>Which macOS Space the window is on</li>
+                      <li>Which macOS Space the window is on (for detection &mdash; macOS does not provide an API to move windows between Spaces)</li>
                       <li>Whether windows are minimized or fullscreen</li>
                     </ul>
                   </div>

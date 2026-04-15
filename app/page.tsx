@@ -157,7 +157,7 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
-              Now with macOS Spaces Support
+              Now with macOS Spaces Detection
             </div>
 
             {/* Headline */}
@@ -416,7 +416,7 @@ export default function Home() {
                   { feature: 'Multi-monitor support', maclayout: true, rectangle: true, magnet: true, moom: true },
                   { feature: 'Auto-trigger on display change', maclayout: true, rectangle: false, magnet: false, moom: false },
                   { feature: 'Auto-trigger on app launch', maclayout: true, rectangle: false, magnet: false, moom: false },
-                  { feature: 'macOS Spaces support', maclayout: true, rectangle: 'partial', magnet: 'partial', moom: 'partial' },
+                  { feature: 'macOS Spaces awareness', maclayout: true, rectangle: 'partial', magnet: 'partial', moom: 'partial' },
                   { feature: 'Smart relative positioning', maclayout: true, rectangle: false, magnet: false, moom: 'partial' },
                   { feature: 'One-time purchase', maclayout: true, rectangle: true, magnet: true, moom: true },
                 ] as { feature: string; maclayout: boolean | string; rectangle: boolean | string; magnet: boolean | string; moom: boolean | string }[]).map((row, index) => (
@@ -558,7 +558,7 @@ export default function Home() {
                     'Multi-monitor support',
                     'Display change triggers',
                     'App launch triggers',
-                    'macOS Spaces support',
+                    'macOS Spaces awareness',
                     'Smart positioning',
                     '1 year of updates included',
                   ].map((feature, index) => (
